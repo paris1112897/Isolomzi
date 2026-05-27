@@ -11,398 +11,131 @@
     --deep: #1a1206;
     --purple: #2e1a47;
     --cream: #f5f0e8;
-    --red: #c0392b;
     --white: #ffffff;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--deep); color: var(--cream); overflow-x: hidden; }
 
-  body {
-    font-family: 'Jost', sans-serif;
-    background: var(--deep);
-    color: var(--cream);
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 6vw;
-    background: rgba(26,18,6,0.92);
-    backdrop-filter: blur(8px);
+    background: rgba(26,18,6,0.95);
     border-bottom: 1px solid rgba(201,168,76,0.2);
   }
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem; font-weight: 700;
-    color: var(--gold); letter-spacing: 1px;
-  }
-  .nav-links { display: flex; gap: 28px; list-style: none; }
-  .nav-links a {
-    color: var(--cream); text-decoration: none;
-    font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;
-    transition: color 0.3s;
-  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--gold); }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { color: var(--cream); text-decoration: none; font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
   .nav-links a:hover { color: var(--gold); }
 
-  /* ── HERO ── */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; text-align: center;
     padding: 120px 6vw 80px;
-    background:
-      linear-gradient(to bottom, rgba(26,18,6,0.7) 0%, rgba(26,18,6,0.5) 50%, rgba(26,18,6,0.9) 100%),
-      url('1779714576188.jpg') center/cover no-repeat;
-    position: relative;
+    background: linear-gradient(to bottom, rgba(26,18,6,0.65) 0%, rgba(26,18,6,0.5) 50%, rgba(26,18,6,0.92) 100%),
+      url('https://drive.google.com/uc?export=view&id=1Vwsl-c8Fwlw_oax5n14SEl-MrJlS58AN') center/cover no-repeat;
   }
-  .hero-badge {
-    display: inline-block;
-    border: 1px solid var(--gold);
-    color: var(--gold); font-size: 0.7rem;
-    letter-spacing: 3px; text-transform: uppercase;
-    padding: 6px 18px; border-radius: 2px;
-    margin-bottom: 28px;
-    animation: fadeUp 0.8s ease both;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 9vw, 6.5rem);
-    font-weight: 900; line-height: 1.05;
-    color: var(--white);
-    animation: fadeUp 0.9s 0.1s ease both;
-  }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; padding: 6px 18px; margin-bottom: 28px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 9vw, 6.5rem); font-weight: 900; line-height: 1.05; color: var(--white); }
   .hero h1 span { color: var(--gold); }
-  .hero p {
-    margin-top: 22px; max-width: 560px;
-    font-size: 1.05rem; font-weight: 300;
-    color: rgba(245,240,232,0.85); line-height: 1.7;
-    animation: fadeUp 1s 0.2s ease both;
-  }
-  .hero-btns {
-    margin-top: 42px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
-    animation: fadeUp 1s 0.35s ease both;
-  }
-  .btn-gold {
-    background: var(--gold); color: var(--deep);
-    padding: 14px 36px; font-size: 0.85rem;
-    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
-    border: none; cursor: pointer; text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: inline-block;
-  }
-  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.4); }
-  .btn-outline {
-    border: 1px solid var(--cream); color: var(--cream);
-    padding: 14px 36px; font-size: 0.85rem;
-    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 400;
-    background: transparent; cursor: pointer; text-decoration: none;
-    transition: background 0.25s, color 0.25s;
-    display: inline-block;
-  }
+  .hero p { margin-top: 22px; max-width: 560px; font-size: 1.05rem; font-weight: 300; color: rgba(245,240,232,0.85); line-height: 1.7; }
+  .hero-btns { margin-top: 42px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .btn-gold { background: var(--gold); color: var(--deep); padding: 14px 36px; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s; }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-outline { border: 1px solid var(--cream); color: var(--cream); padding: 14px 36px; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; background: transparent; text-decoration: none; display: inline-block; transition: background 0.25s, color 0.25s; }
   .btn-outline:hover { background: var(--cream); color: var(--deep); }
 
-  /* ── STATS BAR ── */
-  .stats-bar {
-    background: var(--gold);
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
-    padding: 0;
-  }
-  .stat {
-    flex: 1; min-width: 180px;
-    padding: 22px 30px; text-align: center;
-    border-right: 1px solid rgba(26,18,6,0.2);
-  }
+  .stats-bar { background: var(--gold); display: flex; justify-content: center; flex-wrap: wrap; }
+  .stat { flex: 1; min-width: 160px; padding: 22px 30px; text-align: center; border-right: 1px solid rgba(26,18,6,0.2); }
   .stat:last-child { border-right: none; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem; font-weight: 900; color: var(--deep);
-  }
-  .stat-label {
-    font-size: 0.72rem; letter-spacing: 2px;
-    text-transform: uppercase; color: rgba(26,18,6,0.7);
-    margin-top: 2px;
-  }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--deep); }
+  .stat-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,18,6,0.7); margin-top: 2px; }
 
-  /* ── SECTION BASE ── */
   section { padding: 90px 6vw; }
-  .section-label {
-    font-size: 0.7rem; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 700; line-height: 1.2;
-    margin-bottom: 20px;
-  }
-  .section-sub {
-    font-size: 1rem; font-weight: 300;
-    color: rgba(245,240,232,0.72); line-height: 1.8;
-    max-width: 600px;
-  }
+  .section-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+  .section-sub { font-size: 1rem; font-weight: 300; color: rgba(245,240,232,0.72); line-height: 1.8; max-width: 600px; }
 
-  /* ── ABOUT ── */
   .about { background: #120e07; }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px; align-items: center;
-    margin-top: 50px;
-  }
-  .about-img-wrap { position: relative; }
-  .about-img-wrap img {
-    width: 100%; height: 440px; object-fit: cover;
-    display: block;
-  }
-  .about-img-accent {
-    position: absolute; bottom: -20px; right: -20px;
-    width: 60%; height: 60%;
-    border: 2px solid var(--gold);
-    z-index: -1;
-  }
-  .about-text { }
-  .about-text p {
-    font-size: 1rem; font-weight: 300;
-    color: rgba(245,240,232,0.78); line-height: 1.9;
-    margin-bottom: 18px;
-  }
-  .about-highlights {
-    margin-top: 30px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  }
-  .highlight {
-    border-left: 3px solid var(--gold);
-    padding-left: 14px;
-  }
-  .highlight strong {
-    display: block; font-weight: 500;
-    font-size: 0.9rem; color: var(--gold);
-    margin-bottom: 3px;
-  }
-  .highlight span {
-    font-size: 0.82rem; font-weight: 300;
-    color: rgba(245,240,232,0.6);
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
+  .about-img-wrap img { width: 100%; height: 440px; object-fit: cover; display: block; }
+  .about-text p { font-size: 1rem; font-weight: 300; color: rgba(245,240,232,0.78); line-height: 1.9; margin-bottom: 18px; }
+  .about-highlights { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .highlight { border-left: 3px solid var(--gold); padding-left: 14px; }
+  .highlight strong { display: block; font-weight: 500; font-size: 0.9rem; color: var(--gold); margin-bottom: 3px; }
+  .highlight span { font-size: 0.82rem; font-weight: 300; color: rgba(245,240,232,0.6); }
 
-  /* ── SERVICES ── */
   .services { background: var(--deep); }
   .services-header { text-align: center; margin-bottom: 56px; }
   .services-header .section-sub { margin: 0 auto; }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2px;
-  }
-  .service-card {
-    background: #120e07;
-    padding: 48px 32px;
-    border-bottom: 3px solid transparent;
-    transition: border-color 0.3s, transform 0.3s;
-    cursor: default;
-  }
-  .service-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-  }
-  .service-icon {
-    font-size: 2.2rem; margin-bottom: 20px;
-  }
-  .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--white); margin-bottom: 12px;
-  }
-  .service-card p {
-    font-size: 0.88rem; font-weight: 300;
-    color: rgba(245,240,232,0.62); line-height: 1.75;
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+  .service-card { background: #120e07; padding: 48px 32px; border-bottom: 3px solid transparent; transition: border-color 0.3s, transform 0.3s; }
+  .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .service-icon { font-size: 2.2rem; margin-bottom: 20px; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 12px; }
+  .service-card p { font-size: 0.88rem; font-weight: 300; color: rgba(245,240,232,0.62); line-height: 1.75; }
 
-  /* ── GALLERY ── */
   .gallery { background: #0d0a05; }
-  .gallery-header { margin-bottom: 40px; }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 8px;
-  }
-  .gallery-grid .g-item {
-    overflow: hidden; position: relative;
-    background: #1a1206;
-  }
-  .gallery-grid .g-item img {
-    width: 100%; height: 240px; object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-    filter: brightness(0.88);
-  }
-  .gallery-grid .g-item:hover img {
-    transform: scale(1.06);
-    filter: brightness(1);
-  }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 40px; }
+  .g-item { overflow: hidden; }
+  .g-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.5s ease; filter: brightness(0.88); }
+  .g-item:hover img { transform: scale(1.06); filter: brightness(1); }
   .g-item.wide { grid-column: span 2; }
-  .g-item.wide img { height: 340px; }
-  .gallery-note {
-    text-align: center; margin-top: 28px;
-    font-size: 0.8rem; letter-spacing: 1.5px;
-    color: rgba(245,240,232,0.4); text-transform: uppercase;
-  }
+  .g-item.wide img { height: 320px; }
 
-  /* ── VENUE FEATURES ── */
   .features { background: var(--purple); }
   .features-header { text-align: center; margin-bottom: 50px; }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-  }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
   .feature-item { text-align: center; }
-  .feature-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem; font-weight: 900;
-    color: var(--gold); line-height: 1;
-  }
-  .feature-desc {
-    font-size: 0.82rem; letter-spacing: 1.5px;
-    text-transform: uppercase; margin-top: 8px;
-    color: rgba(245,240,232,0.7);
-  }
+  .feature-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; color: var(--gold); line-height: 1; }
+  .feature-desc { font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 8px; color: rgba(245,240,232,0.7); }
 
-  /* ── CONTACT ── */
   .contact { background: #120e07; }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-top: 50px;
-  }
-  .contact-info { }
-  .contact-info p {
-    font-size: 0.95rem; font-weight: 300;
-    color: rgba(245,240,232,0.72); line-height: 1.9;
-    margin-bottom: 32px;
-  }
-  .contact-detail {
-    display: flex; align-items: flex-start; gap: 16px;
-    margin-bottom: 24px;
-  }
-  .contact-detail .icon {
-    font-size: 1.3rem; margin-top: 2px; flex-shrink: 0;
-  }
-  .contact-detail div strong {
-    display: block; font-weight: 500;
-    font-size: 0.7rem; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 4px;
-  }
-  .contact-detail div span {
-    font-size: 0.95rem; font-weight: 300;
-    color: rgba(245,240,232,0.8);
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 50px; }
+  .contact-info p { font-size: 0.95rem; font-weight: 300; color: rgba(245,240,232,0.72); line-height: 1.9; margin-bottom: 32px; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+  .contact-detail .icon { font-size: 1.3rem; margin-top: 2px; }
+  .contact-detail div strong { display: block; font-weight: 500; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .contact-detail div span { font-size: 0.95rem; font-weight: 300; color: rgba(245,240,232,0.8); }
   .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select {
-    background: rgba(245,240,232,0.05);
-    border: 1px solid rgba(201,168,76,0.25);
-    color: var(--cream); font-family: 'Jost', sans-serif;
-    font-size: 0.9rem; padding: 14px 18px;
-    outline: none; width: 100%;
-    transition: border-color 0.3s;
-  }
-  .contact-form input:focus,
-  .contact-form textarea:focus,
-  .contact-form select:focus {
-    border-color: var(--gold);
-  }
+  .contact-form input, .contact-form textarea, .contact-form select { background: rgba(245,240,232,0.05); border: 1px solid rgba(201,168,76,0.25); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.9rem; padding: 14px 18px; outline: none; width: 100%; transition: border-color 0.3s; }
+  .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--gold); }
   .contact-form textarea { height: 130px; resize: none; }
   .contact-form select option { background: var(--deep); }
-  .contact-form label {
-    font-size: 0.7rem; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: -8px;
-  }
-
-  /* ── MAP ── */
-  .map-wrap {
-    margin-top: 50px;
-    border: 1px solid rgba(201,168,76,0.2);
-    overflow: hidden;
-  }
+  .contact-form label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: -8px; }
+  .map-wrap { margin-top: 50px; border: 1px solid rgba(201,168,76,0.2); overflow: hidden; }
   .map-wrap iframe { width: 100%; height: 320px; border: none; display: block; }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--deep);
-    border-top: 1px solid rgba(201,168,76,0.15);
-    padding: 36px 6vw;
-    display: flex; flex-wrap: wrap;
-    align-items: center; justify-content: space-between;
-    gap: 16px;
-  }
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem; color: var(--gold); font-weight: 700;
-  }
-  .footer-copy {
-    font-size: 0.78rem; color: rgba(245,240,232,0.35);
-    letter-spacing: 0.5px;
-  }
+  footer { background: var(--deep); border-top: 1px solid rgba(201,168,76,0.15); padding: 36px 6vw; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); font-weight: 700; }
+  .footer-copy { font-size: 0.78rem; color: rgba(245,240,232,0.35); }
   .footer-links { display: flex; gap: 20px; }
-  .footer-links a {
-    font-size: 0.78rem; color: rgba(245,240,232,0.4);
-    text-decoration: none; letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
+  .footer-links a { font-size: 0.78rem; color: rgba(245,240,232,0.4); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
   .footer-links a:hover { color: var(--gold); }
 
-  /* ── WHATSAPP FAB ── */
-  .wa-fab {
-    position: fixed; bottom: 28px; right: 24px; z-index: 200;
-    width: 58px; height: 58px; border-radius: 50%;
-    background: #25D366;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    text-decoration: none;
-    transition: transform 0.2s;
-  }
+  .wa-fab { position: fixed; bottom: 28px; right: 24px; z-index: 200; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.2s; }
   .wa-fab:hover { transform: scale(1.1); }
   .wa-fab svg { width: 28px; height: 28px; fill: white; }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
-    .g-item.wide { grid-column: span 2; }
     .about-img-wrap img { height: 280px; }
-    .about-img-accent { display: none; }
     .stat { min-width: 140px; }
   }
   @media (max-width: 480px) {
     .gallery-grid { grid-template-columns: 1fr; }
     .g-item.wide { grid-column: span 1; }
     .g-item.wide img { height: 240px; }
-    .features-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Isolomzi Place</div>
   <ul class="nav-links">
@@ -413,9 +146,8 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Palm Ridge · Katlehong · Est. Venue</div>
+  <div class="hero-badge">Palm Ridge · Katlehong · Alberton</div>
   <h1>Isolomzi<br/><span>Place</span></h1>
   <p>A unique venue for conferences, celebrations, pool parties & accommodation — nestled under ancient trees in the heart of Katlehong.</p>
   <div class="hero-btns">
@@ -424,32 +156,17 @@
   </div>
 </section>
 
-<!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat">
-    <div class="stat-num">78%</div>
-    <div class="stat-label">Recommend Us</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">71+</div>
-    <div class="stat-label">Reviews</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">5+</div>
-    <div class="stat-label">Venue Spaces</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">1</div>
-    <div class="stat-label">Unforgettable Venue</div>
-  </div>
+  <div class="stat"><div class="stat-num">78%</div><div class="stat-label">Recommend Us</div></div>
+  <div class="stat"><div class="stat-num">71+</div><div class="stat-label">Reviews</div></div>
+  <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Venue Spaces</div></div>
+  <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Memories Made</div></div>
 </div>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
     <div class="about-img-wrap">
-      <img src="1779714417561.jpg" alt="Isolomzi Place outdoor venue"/>
-      <div class="about-img-accent"></div>
+      <img src="https://drive.google.com/uc?export=view&id=1jct0Fn7d8OuXCNKEeAJmZnRBW9tL9Unx" alt="Isolomzi Place"/>
     </div>
     <div class="about-text">
       <div class="section-label">Who We Are</div>
@@ -457,28 +174,15 @@
       <p>Isolomzi Place is a one-of-a-kind event and hospitality destination located at 59 Hawthorn Street, Palm Ridge, Katlehong. With thatched-roof structures, lush trees, a sparkling pool, and multiple event spaces, we bring people together for life's biggest moments.</p>
       <p>Whether you're planning a corporate conference, a birthday celebration, a wedding, or just a relaxed pool day — Isolomzi Place has the space, the atmosphere, and the heart to make it memorable.</p>
       <div class="about-highlights">
-        <div class="highlight">
-          <strong>Indoor Hall</strong>
-          <span>Formal dining & conference setup</span>
-        </div>
-        <div class="highlight">
-          <strong>Outdoor Lawn</strong>
-          <span>Stretch tent with natural shade</span>
-        </div>
-        <div class="highlight">
-          <strong>Swimming Pool</strong>
-          <span>Pool parties & leisure events</span>
-        </div>
-        <div class="highlight">
-          <strong>Accommodation</strong>
-          <span>En-suite rooms on-site</span>
-        </div>
+        <div class="highlight"><strong>Indoor Hall</strong><span>Formal dining & conference setup</span></div>
+        <div class="highlight"><strong>Outdoor Lawn</strong><span>Stretch tent with natural shade</span></div>
+        <div class="highlight"><strong>Swimming Pool</strong><span>Pool parties & leisure events</span></div>
+        <div class="highlight"><strong>Accommodation</strong><span>En-suite rooms on-site</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header">
     <div class="section-label">What We Offer</div>
@@ -486,138 +190,75 @@
     <p class="section-sub">From intimate gatherings to large-scale corporate events — we've got the space, the setup, and the support you need.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🏢</div>
-      <h3>Conference & Meetings</h3>
-      <p>Professional indoor conference facilities with seating, tables, AV-ready space, and a focused atmosphere for productive sessions.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🎉</div>
-      <h3>Private Events & Parties</h3>
-      <p>Birthday parties, family gatherings, baby showers — our outdoor and indoor spaces transform into the perfect celebration backdrop.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">💍</div>
-      <h3>Weddings & Functions</h3>
-      <p>Say your vows or host your reception at our beautifully landscaped venue. Romantic, natural, and unforgettable.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏊</div>
-      <h3>Pool Parties</h3>
-      <p>A sparkling pool, open skies, and a lively atmosphere — perfect for pool parties, year-end functions, and summer events.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🛏️</div>
-      <h3>Accommodation</h3>
-      <p>En-suite rooms available for overnight guests and event visitors. Comfortable, private, and right on the venue grounds.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌿</div>
-      <h3>Outdoor Garden Hire</h3>
-      <p>Hire our lush outdoor lawn with stretch tents and wooden seating for large outdoor events in a natural, shaded setting.</p>
-    </div>
+    <div class="service-card"><div class="service-icon">🏢</div><h3>Conference & Meetings</h3><p>Professional indoor conference facilities with seating, tables, and a focused atmosphere for productive sessions.</p></div>
+    <div class="service-card"><div class="service-icon">🎉</div><h3>Private Events & Parties</h3><p>Birthday parties, family gatherings, baby showers — our spaces transform into the perfect celebration backdrop.</p></div>
+    <div class="service-card"><div class="service-icon">💍</div><h3>Weddings & Functions</h3><p>Say your vows or host your reception at our beautifully landscaped venue. Romantic, natural, and unforgettable.</p></div>
+    <div class="service-card"><div class="service-icon">🏊</div><h3>Pool Parties</h3><p>A sparkling pool, open skies, and a lively atmosphere — perfect for pool parties and summer events.</p></div>
+    <div class="service-card"><div class="service-icon">🛏️</div><h3>Accommodation</h3><p>En-suite rooms available for overnight guests and event visitors. Comfortable and private.</p></div>
+    <div class="service-card"><div class="service-icon">🌿</div><h3>Outdoor Garden Hire</h3><p>Lush outdoor lawn with stretch tents and wooden seating for large outdoor events in a natural setting.</p></div>
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="gallery" id="gallery">
-  <div class="gallery-header">
-    <div class="section-label">Our Space</div>
-    <h2 class="section-title">See Isolomzi Place</h2>
-  </div>
+  <div class="section-label">Our Space</div>
+  <h2 class="section-title">See Isolomzi Place</h2>
   <div class="gallery-grid">
     <div class="g-item wide">
-      <img src="1779714707821.jpg" alt="Isolomzi Place venue"/>
+      <img src="https://drive.google.com/uc?export=view&id=1Vwsl-c8Fwlw_oax5n14SEl-MrJlS58AN" alt="Isolomzi Place venue"/>
     </div>
     <div class="g-item">
-      <img src="1779747491856.jpg" alt="Swimming pool"/>
+      <img src="https://drive.google.com/uc?export=view&id=10tmTz_3ClDrdb-Q63QAJ9H4e6A6Y1NZB" alt="Swimming pool"/>
     </div>
     <div class="g-item">
-      <img src="1779748542056.jpg" alt="Pool party"/>
+      <img src="https://drive.google.com/uc?export=view&id=1O0BN4E-d7IgVRhFxliciDXPL4Yi1etVE" alt="Pool party"/>
+    </div>
+    <div class="g-item">
+      <img src="https://drive.google.com/uc?export=view&id=1NOGUW9j9KyqdlLFZr880yh1txiGJBbTe" alt="Outdoor lawn"/>
     </div>
     <div class="g-item wide">
-      <img src="1779748813531.jpg" alt="Outdoor lawn and tent"/>
+      <img src="https://drive.google.com/uc?export=view&id=1UN8JmfMPEg8H_P1wpFLDVqB6juoE2HHz" alt="Event setup"/>
     </div>
     <div class="g-item">
-      <img src="1779749103037.jpg" alt="Indoor dining hall"/>
+      <img src="https://drive.google.com/uc?export=view&id=1-AuwJiE9MlAfn14JPLbgBB_zNvMiPbIE" alt="Accommodation room"/>
     </div>
     <div class="g-item">
-      <img src="1779747702822.jpg" alt="Accommodation room"/>
+      <img src="https://drive.google.com/uc?export=view&id=1VVRSfbURUzpMVw-IAzeYOvyBhaMVp_g8" alt="Entrance"/>
+    </div>
+    <div class="g-item">
+      <img src="https://drive.google.com/uc?export=view&id=1_s1tCce910vDIFcX4k5JllTM9G4cg321" alt="Pool area"/>
+    </div>
+    <div class="g-item">
+      <img src="https://drive.google.com/uc?export=view&id=1NqTk1fvfgk4EUo0SQJOcwBehSD2eodrX" alt="Indoor dining"/>
     </div>
     <div class="g-item wide">
-      <img src="1779713707217.jpg" alt="Isolomzi Place entrance"/>
-    </div>
-    <div class="g-item">
-      <img src="1779775278555.jpg" alt="Event decor setup"/>
-    </div>
-    <div class="g-item">
-      <img src="1779775361729.jpg" alt="Wedding decor"/>
+      <img src="https://drive.google.com/uc?export=view&id=1mSDv-Ni4Swax1mAbsFUWRxwIf44fAQam" alt="Wedding decor"/>
     </div>
   </div>
-  <p class="gallery-note">More photos available on our Facebook page · Isolomzi Place</p>
 </section>
 
-<!-- VENUE FEATURES -->
 <section class="features">
   <div class="features-header">
     <div class="section-label">By The Numbers</div>
     <h2 class="section-title">A Venue Built for Every Occasion</h2>
   </div>
   <div class="features-grid">
-    <div class="feature-item">
-      <div class="feature-num">5+</div>
-      <div class="feature-desc">Unique Spaces</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">1</div>
-      <div class="feature-desc">Swimming Pool</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">71</div>
-      <div class="feature-desc">Happy Reviews</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">∞</div>
-      <div class="feature-desc">Memories Made</div>
-    </div>
+    <div class="feature-item"><div class="feature-num">5+</div><div class="feature-desc">Unique Spaces</div></div>
+    <div class="feature-item"><div class="feature-num">1</div><div class="feature-desc">Swimming Pool</div></div>
+    <div class="feature-item"><div class="feature-num">71</div><div class="feature-desc">Happy Reviews</div></div>
+    <div class="feature-item"><div class="feature-num">∞</div><div class="feature-desc">Memories Made</div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-label">Get In Touch</div>
   <h2 class="section-title">Book Your Event</h2>
   <div class="contact-grid">
     <div class="contact-info">
-      <p>Ready to plan your next event? Contact us today for availability, pricing, and a personalised quote. We're here to make your occasion extraordinary.</p>
-      <div class="contact-detail">
-        <div class="icon">📍</div>
-        <div>
-          <strong>Address</strong>
-          <span>59 Hawthorn Street, Palm Ridge<br/>Katlehong, Alberton, 1426</span>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📞</div>
-        <div>
-          <strong>Phone / WhatsApp</strong>
-          <span><a href="tel:0825078710" style="color:var(--gold);text-decoration:none;">082 507 8710</a></span>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">✉️</div>
-        <div>
-          <strong>Email</strong>
-          <span><a href="mailto:isolomziplace@gmail.com" style="color:var(--gold);text-decoration:none;">isolomziplace@gmail.com</a></span>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📘</div>
-        <div>
-          <strong>Facebook</strong>
-          <span>Isolomzi Place</span>
-        </div>
-      </div>
+      <p>Ready to plan your next event? Contact us today for availability, pricing, and a personalised quote.</p>
+      <div class="contact-detail"><div class="icon">📍</div><div><strong>Address</strong><span>59 Hawthorn Street, Palm Ridge<br/>Katlehong, Alberton, 1426</span></div></div>
+      <div class="contact-detail"><div class="icon">📞</div><div><strong>Phone / WhatsApp</strong><span><a href="tel:0825078710" style="color:var(--gold);text-decoration:none;">082 507 8710</a></span></div></div>
+      <div class="contact-detail"><div class="icon">✉️</div><div><strong>Email</strong><span><a href="mailto:isolomziplace@gmail.com" style="color:var(--gold);text-decoration:none;">isolomziplace@gmail.com</a></span></div></div>
+      <div class="contact-detail"><div class="icon">📘</div><div><strong>Facebook</strong><span>Isolomzi Place</span></div></div>
     </div>
     <div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
@@ -641,17 +282,11 @@
       </form>
     </div>
   </div>
-
-  <!-- MAP -->
   <div class="map-wrap">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560!2d28.18!3d-26.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s59+Hawthorn+Street+Palm+Ridge+Katlehong!5e0!3m2!1sen!2sza!4v1"
-      allowfullscreen loading="lazy">
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560!2d28.18!3d-26.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s59+Hawthorn+Street+Palm+Ridge+Katlehong!5e0!3m2!1sen!2sza!4v1" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Isolomzi Place</div>
   <div class="footer-copy">© 2026 Isolomzi Place · 59 Hawthorn St, Palm Ridge, Katlehong</div>
@@ -662,7 +297,6 @@
   </div>
 </footer>
 
-<!-- WHATSAPP FAB -->
 <a href="https://wa.me/27825078710" class="wa-fab" target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -672,16 +306,15 @@
 <script>
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
+  var btn = e.target.querySelector('button');
   btn.textContent = '✓ Sent! We\'ll be in touch soon.';
   btn.style.background = '#27ae60';
-  setTimeout(() => {
+  setTimeout(function() {
     btn.textContent = 'Send Enquiry';
     btn.style.background = '';
     e.target.reset();
   }, 4000);
 }
 </script>
-
 </body>
 </html>
